@@ -41,6 +41,25 @@ else
     echo "$num is NOT a Prime number"
 fi
 
+REVERSE AND SUM
+#!/bin/bash
+echo "Enter a number:"
+read num
+rev=0
+sum=0
+temp=$num  # Save original number
+
+while [ $num -gt 0 ]
+do
+  digit=$((num % 10))
+  rev=$((rev * 10 + digit))
+  sum=$((sum + digit))
+  num=$((num / 10))
+done
+
+echo "Reversed number is $rev"
+echo "Sum of digits is $sum"
+
 
 # 3️⃣ Generate Fibonacci Series up to n terms
 echo "Enter how many terms of Fibonacci series you want:"
