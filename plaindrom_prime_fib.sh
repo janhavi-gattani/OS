@@ -21,6 +21,36 @@ else
 fi
 
 
+#!/bin/bash
+echo "Enter a number:"
+read num
+
+# Convert number to individual digits
+len=${#num}
+echo -n "In words: "
+for (( i=0; i<$len; i++ ))
+do
+  digit=${num:$i:1}
+  case $digit in
+    0) echo -n "Zero " ;;
+    1) echo -n "One " ;;
+    2) echo -n "Two " ;;
+    3) echo -n "Three " ;;
+    4) echo -n "Four " ;;
+    5) echo -n "Five " ;;
+    6) echo -n "Six " ;;
+    7) echo -n "Seven " ;;
+    8) echo -n "Eight " ;;
+    9) echo -n "Nine " ;;
+    *) echo -n "Invalid " ;;
+  esac
+done
+
+echo    # Newline after output
+
+
+
+
 # 2️⃣ Check Prime
 flag=0
 if [ $num -le 1 ]; then
